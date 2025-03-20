@@ -79,3 +79,6 @@ plot(pressure)
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 
+### ESTO SE VA A ROMPER
+
+Si estamos escribiendo en el mismo lugar, no deberia saber en que orden poner las cosas.
