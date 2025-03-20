@@ -12,13 +12,14 @@ knitr::opts_chunk$set(echo = TRUE)
 ### Datos básicos 
 Los tipos de datos básicos que tenemos en R son:
 
-* 'logical': las posibles valores son 'TRUE' o 'FALSE'. **Importante:** R es sensible a mayusculas.
-* 'character': una secuencia de caracteres (puede ser solo uno), se escribe entre comillas simples o dobles.
-* 'numeric': un numero con decimeales. Es importante que utilicemos el punto como separador '3.1415'.
+* 'logical': las posibles valores son `TRUE` o `FALSE`. **Importante:** R es sensible a mayusculas.
+* 'character': una secuencia de caracteres (puede ser solo uno), se escribe entre comillas simples o dobles `"Hola mundo"`.
+* 'numeric': un numero con decimeales. Es importante que utilicemos el punto como separador `3.1415`.
 * 'integer': un número entero.
-* 'complex': 
+* 'complex': un número complejo `3-2i`.
+* 'raw': es una sequencia de bits.
 
-#### Factores ordenados
+## Including Code
 
 
 #### Asignaciones de variables
