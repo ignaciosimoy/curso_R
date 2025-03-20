@@ -70,6 +70,41 @@ Si no se utiliza ninguna de las tres formas de asignación, el valor se mostrar�
 c(3, 5, 6)
 ```
 
+## Aritmética vectorial
+
+Los vectores pueden usarse en expresiones aritméticas, donde las operaciones se realizan elemento a elemento. 
+
+```{r }
+v1 <- c(3, 5, 6)
+v2 <- c(5, 7, 13)
+v3 <- v1 + v2
+
+print(v3)
+```
+
+Dos vectores que se utilizan en la misma expresión no tienen por qué ser de la misma longitud.
+
+Si no lo son, el resultado será un vector de la longitud del más largo, y el más corto será reciclado, repitiéndolo tantas veces como sea necesario (puede que no un número exacto de veces) hasta que coincida con el más largo. Lo mismo sucede cuando a un vector le sumamos un escalar. 
+
+R suele advertirnos de este problema. 
+
+
+```{r }
+v1 <- c(3, 5, 6)
+v2 <- c(5, 7, 13, 6, 19)
+v3 <- v1 + v2
+
+print(v3)
+```
+
+```{r }
+v4 <- v1/v2
+
+print(v4)
+```
+
+Algunas funciones importantes para trabajar con vectores son: `sum(v1)`, `length(v1)`, `mean(v1)`, `cumsum(v1)`, `var(v1)`, `sort(v1)`, etc
+
 ## Including Plots
 
 Acá mejor no incluir gráficos.
