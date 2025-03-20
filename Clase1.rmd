@@ -19,6 +19,9 @@ Los tipos de datos básicos que tenemos en R son:
 * 'complex': un número complejo `3-2i`.
 * 'raw': es una sequencia de bits.
 
+Los ultimos tipos de datos no los vamos a utilizar.
+
+
 ## Including Code
 
 
@@ -76,4 +79,3 @@ plot(pressure)
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 
-#### Agrego algo en algún lado
