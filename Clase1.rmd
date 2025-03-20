@@ -11,6 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Datos básicos 
 Los tipos de datos básicos que tenemos en R son:
+
 * 'logical': las posibles valores son 'TRUE' o 'FALSE'. **Importante:** R es sensible a mayusculas.
 * 'character': una secuencia de caracteres (puede ser solo uno), se escribe entre comillas simples o dobles.
 * 'numeric': un numero con decimeales. Es importante que utilicemos el punto como separador '3.1415'.
@@ -20,7 +21,26 @@ Los tipos de datos básicos que tenemos en R son:
 #### Factores ordenados
 
 
-## Including Code
+#### Asignaciones de variables
+
+Para asignar el valor a una variable, se utiliza el símbolo el operador de asignación (‘<-’), apuntando hacia el objeto que recibe el valor. Por ejemplo, le asignamos a la variable x el valor 2.
+```{r }
+x <- 2
+```
+**Importante:** Si en una instancia posterior del código realizamos otra asignación hacia la variable x, perderemos el valor 2 asignado previamente.
+
+R trabaja sobre estructuras de datos. La estructura más simple es un vector numérico, que consiste en un conjunto ordenado de números. Cuando asignamos un valor a una variable, estamos creando un vector de dimensión 1. 
+
+Para crear vectores de dimensión mayor se utiliza el comando `c()`. Por ejemplo, para asignarle a la variable y un vector que contenga los valores 3, 6 y 2 haremos
+
+```{r}
+y <- c(3,6,2)
+```
+
+Para saber qué valores tiene la variable y, la imprimimos.
+```{r}
+print(y)
+```
 
 You can include R code in the document as follows:
 
