@@ -23,6 +23,9 @@ Los tipos de datos básicos que tenemos en R son:
 -   'complex': un número complejo `3-2i`.
 -   'raw': es una sequencia de bits.
 
+
+## Including Code
+
 #### Asignaciones de variables
 
 Para asignar el valor a una variable, se utiliza el símbolo el operador de asignación (‘\<-’), apuntando hacia el objeto que recibe el valor. Por ejemplo, le asignamos a la variable x el valor 2.
@@ -69,28 +72,50 @@ print(x)
 
 Notar que ahora x ya no vale 2.
 
-cualquier boludez
+La asignación también se puede realizar utilizando el comando `<-` en la otra dirección
 
-You can include R code in the document as follows:
-
-```{r cars}
-summary(cars)
+```{r }
+c(1, 2, 3) -> x
+print(x)
 ```
 
-## Including Plots
+Si no se utiliza ninguna de las tres formas de asignación, el valor se mostrará por pantalla pero no se guardará en ninguna variable.
 
-Acá mejor no incluir gráficos.
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r }
+c(3, 5, 6)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Aritmética vectorial
 
-En el mismo lugar, como digjo el Torta!!!
+Los vectores pueden usarse en expresiones aritméticas, donde las operaciones se realizan elemento a elemento. 
 
-### ESTO SE VA A ROMPER
+```{r }
+v1 <- c(3, 5, 6)
+v2 <- c(5, 7, 13)
+v3 <- v1 + v2
 
-Si estamos escribiendo en el mismo lugar, no deberia saber en que orden poner las cosas.
+print(v3)
+```
+
+Dos vectores que se utilizan en la misma expresión no tienen por qué ser de la misma longitud.
+
+Si no lo son, el resultado será un vector de la longitud del más largo, y el más corto será reciclado, repitiéndolo tantas veces como sea necesario (puede que no un número exacto de veces) hasta que coincida con el más largo. Lo mismo sucede cuando a un vector le sumamos un escalar. 
+
+R suele advertirnos de este problema. 
+
+
+```{r }
+v1 <- c(3, 5, 6)
+v2 <- c(5, 7, 13, 6, 19)
+v3 <- v1 + v2
+
+print(v3)
+```
+
+```{r }
+v4 <- v1/v2
+
+print(v4)
+```
+
+Algunas funciones importantes para trabajar con vectores son: `sum(v1)`, `length(v1)`, `mean(v1)`, `cumsum(v1)`, `var(v1)`, `sort(v1)`, etc
