@@ -77,15 +77,3 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 
 #### Agrego algo en algún lado
-
-
-
-## Prueba de GIT
-<<<<<<< HEAD
-Deberiamos poder modificar los dos. Siempre hay que hacer un Pull antes del Push.
-=======
-
-Deberiamos poder modificar los dos
-
-
-bastaaaaaaaaaaa!!!
