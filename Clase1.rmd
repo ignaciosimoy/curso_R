@@ -21,6 +21,8 @@ summary(cars)
 
 ## Including Plots
 
+Acá mejor no incluir gráficos. 
+
 You can also embed plots, for example:
 
 ```{r pressure, echo=FALSE}
