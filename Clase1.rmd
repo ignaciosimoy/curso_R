@@ -42,6 +42,20 @@ Para saber qué valores tiene la variable y, la imprimimos.
 print(y)
 ```
 
+Si bien el comando `<-` es el más utilizado, existen otras formas de asignación de variables. Podemos utilizar el comando `assign("variable", valor)`. 
+
+```{r }
+assign("x", c(1.3, 2.5, 4.2, 9.7, 8.1))
+print(x)
+```
+
+Notar que ahora x ya no vale 2. 
+
+
+
+
+
+
 You can include R code in the document as follows:
 
 ```{r cars}
