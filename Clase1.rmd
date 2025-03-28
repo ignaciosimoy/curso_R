@@ -1,6 +1,9 @@
 ---
 title: "Clase 1"
-output: github_document
+output: 
+  github_document:
+    toc: true
+    toc_depth: 5
 ---
 
 ```{r setup, include=FALSE}
@@ -20,7 +23,6 @@ Los tipos de datos básicos que tenemos en R son:
 -   'complex': un número complejo `3-2i`.
 -   'raw': es una sequencia de bits.
 
-Los ultimos tipos de datos no los vamos a utilizar.
 
 ## Including Code
 
@@ -33,6 +35,19 @@ x <- 2
 ```
 
 **Importante:** Si en una instancia posterior del código realizamos otra asignación hacia la variable x, perderemos el valor 2 asignado previamente.
+
+### Estructuras
+
+Las variables son objetos en R que tienen dos atributos: la clase (`mode`) y la estructura (`structure`).
+
+Las estructuras mas utilizadas son:
+
+-   Los vector son estructuras de una dimensón que puede contener elementos del mismo tipo.
+-   Las matrices son estructuras de 2 dimensiones compuestas por vectores que podemos considerarlos las filas o columnas. Es una estructura útil para realizar cálcuos algebraicos.
+-   Los data frames son una estructura de dos dimensiones porque nos permite almacenar datos de distinto tipo en cada columna, ya no estamos ante una matriz sino ante una tabla. Las columnas son de un data frame son vectores (todos los datos de una columna deben ser del mismo tipo).
+-   Las listas son estructuras versatiles de una dimensión que permiten almacenar dentro elementos de distinto tipos incluidos data frames y listas.
+
+#### Vectores
 
 R trabaja sobre estructuras de datos. La estructura más simple es un vector numérico, que consiste en un conjunto ordenado de números. Cuando asignamos un valor a una variable, estamos creando un vector de dimensión 1.
 
@@ -104,21 +119,3 @@ print(v4)
 ```
 
 Algunas funciones importantes para trabajar con vectores son: `sum(v1)`, `length(v1)`, `mean(v1)`, `cumsum(v1)`, `var(v1)`, `sort(v1)`, etc
-
-## Including Plots
-
-Acá mejor no incluir gráficos.
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-
-En el mismo lugar, como digjo el Torta!!!
-
-### ESTO SE VA A ROMPER
-
-Si estamos escribiendo en el mismo lugar, no deberia saber en que orden poner las cosas.
