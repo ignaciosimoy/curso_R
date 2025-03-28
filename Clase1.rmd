@@ -244,3 +244,43 @@ if((numero %% 2) == 0) { # Si el número tiene resto 0 al dividirlo por 2
 ```
 
 Esa es una posible solución pero no funciona si el valor ingresado no es un número. ¿Cómo podríamos arreglarlo?
+
+#### Utilización del `ifelse`
+
+Cuando operamos con vectores de longitud mayor a 1, y queremos aplicar una comparación en cada de una de las componentes del vector no podemos utilizar el comando `if`. Veamos qué ocurre si lo hacemos.
+
+```{r }
+
+# Ingresamo un vector
+vector <- 1:5
+
+if (vector < 2) print("Es menor que 2")
+
+```
+
+Esto emite un mensaje diciendo que solo se utilizará el primer elemento en la comparación. 
+
+Si queremos que se aplique a todos los elementos debemos usar el comando `ifelse` que tiene una sintaxis un tanto diferente. La misma es la siguiente `ifelse(condiciones, accion_si_es_true, accion_si_es_false)`.
+
+```{r }
+
+# Ingresamo un vector
+vector <- 1:5
+
+ifelse(vector < 3, "menor a 3", "mayor o igual a 3")
+
+```
+
+Siempre hay que dar una acción para cuando la condición es verdadera y otra para cuando es falsa. La acción puede algo que no sea solo imprimir.
+
+
+```{r }
+# Ingresamo un vector
+vector <- 1:10
+
+# Si es par lo dejamos como está, si es impar le sumamos 1
+todos_pares <- ifelse(vector %% 2 == 0, vector, vector+1)
+print(todos_pares)
+```
+
+
