@@ -128,7 +128,119 @@ Siempre en programción es necesario poder controlar el flujo de las acciones, e
 - Operadores de elección: if (si), else (sino), ifelse.
 - Operadores de iteración: for (para), while (mientras), replicate (replicar), etc.
 
+#### Utilización del `if`
+
+El operador básico de control de flujoj es el `if` que actúa como un condicional. Significa 'si' y lo que hacer es permitir ejecutar una acción siempre que una condición se cumpla. La estructura es la siguiente:
 
 
+`if (condición) acción_si_condición_es_verdadera`
+
+```{r }
+# Un ejemplo simple: ingresamos un número y vemos si es mayor que 5
+
+numero <- 7
+
+if (numero > 5) print('el numero es mayor que 5')
+
+```
+
+Si no se cumple la condición, no se ejecutará la acción, por ejemplo:
+
+```{r }
+
+numero <- 4
+
+if (numero > 5) print('el numero es mayor que 5')
+
+```
+
+El código que se ejecuta cuando la condición del `if` se cumple puede ocupar más de una línea, en ese caso se utilizan llaves para delimitarlo
+
+```{r }
+
+# Definir el radio del círculo
+radio <- 3
+
+# Si el radio es mayor que 0, calcular el área y el perímero 
+if (radio > 0) {
+  
+  area <- pi * radio^2
+  perimetro <- 2 * pi * radio
+  
+  # Imprimir resultados
+  print(paste("Área del círculo:", round(area, 2)))
+  print(paste("Perímetro del círculo:", round(perimetro, 2)))
+}
+
+```
+
+Notar que en el código anterior, todo lo que está dentro del `if` está identado un TAB a la derecha. Esto no es necesario para que el código funcione pero si es una regla de estilo que simplifica la lectura de códigos largos. 
+
+#### Utilización del `else`
+
+Muchas veces es necesario ejecutar una acción en caso de que el `if` no se cumpla, para estos casos se utiliza el comando  `else`. 
+
+Retomando el ejemplo anterior, podemos avisarle al usuario que ingresó un radio no válido.
+
+```{r }
+# Definir el radio del círculo
+radio <- -2
+
+# Si el radio es mayor que 0, calcular el área y el perímero 
+if (radio > 0) {
+  
+  area <- pi * radio^2
+  perimetro <- 2 * pi * radio
+  
+  # Imprimir resultados
+  print(paste("Área del círculo:", round(area, 2)))
+  print(paste("Perímetro del círculo:", round(perimetro, 2)))
+
+} else {
+  
+    print('El radio ingresado no es válido')
+
+}
+```
 
 
+También podemos usar un `if` y un `else` para determinar si un número es o no par. 
+
+```{r }
+
+# Ingresamo un número
+numero  <- 120
+
+if((numero %% 2) == 0) { # Si el número tiene resto 0 al dividirlo por 2
+  
+  print(paste(numero,"es par"))
+  
+} else {
+  
+    print(paste(numero,"no es par")) 
+}
+
+```
+
+En el código anterior no podemos asegurar que el número es impar ya que no chequeamos antes que el número sea un entero. 
+
+Podemos intentar dar una solución al problema ingresando dentro del `else` una nueva condición `if`.
+
+```{r }
+
+# Ingresamo un número
+numero  <- 121
+
+if((numero %% 2) == 0) { # Si el número tiene resto 0 al dividirlo por 2
+  print(paste(numero,"es par"))
+} else {
+    if ((numero %% 2) == 1) {
+      print(paste(numero,"es impar"))
+    } else {
+      print(paste(numero,"no es par ni impar"))
+    }
+}
+
+```
+
+Esa es una posible solución pero no funciona si el valor ingresado no es un número. ¿Cómo podríamos arreglarlo?
