@@ -88,21 +88,62 @@ c(3, 5, 6)
 
     ## [1] 3 5 6
 
-cualquier boludez
+## Aritmética vectorial
 
-You can include R code in the document as follows:
+Los vectores pueden usarse en expresiones aritméticas, donde las
+operaciones se realizan elemento a elemento.
 
 ``` r
-summary(cars)
+v1 <- c(3, 5, 6)
+v2 <- c(5, 7, 13)
+v3 <- v1 + v2
+
+print(v3)
 ```
 
-    ##      speed           dist       
-    ##  Min.   : 4.0   Min.   :  2.00  
-    ##  1st Qu.:12.0   1st Qu.: 26.00  
-    ##  Median :15.0   Median : 36.00  
-    ##  Mean   :15.4   Mean   : 42.98  
-    ##  3rd Qu.:19.0   3rd Qu.: 56.00  
-    ##  Max.   :25.0   Max.   :120.00
+    ## [1]  8 12 19
+
+Dos vectores que se utilizan en la misma expresión no tienen por qué ser
+de la misma longitud.
+
+Si no lo son, el resultado será un vector de la longitud del más largo,
+y el más corto será reciclado, repitiéndolo tantas veces como sea
+necesario (puede que no un número exacto de veces) hasta que coincida
+con el más largo. Lo mismo sucede cuando a un vector le sumamos un
+escalar.
+
+R suele advertirnos de este problema.
+
+``` r
+v1 <- c(3, 5, 6)
+v2 <- c(5, 7, 13, 6, 19)
+v3 <- v1 + v2
+```
+
+    ## Warning in v1 + v2: longitud de objeto mayor no es múltiplo de la longitud de
+    ## uno menor
+
+``` r
+print(v3)
+```
+
+    ## [1]  8 12 19  9 24
+
+``` r
+v4 <- v1/v2
+```
+
+    ## Warning in v1/v2: longitud de objeto mayor no es múltiplo de la longitud de uno
+    ## menor
+
+``` r
+print(v4)
+```
+
+    ## [1] 0.6000000 0.7142857 0.4615385 0.5000000 0.2631579
+
+Algunas funciones importantes para trabajar con vectores son: `sum(v1)`,
+`length(v1)`, `mean(v1)`, `cumsum(v1)`, `var(v1)`, `sort(v1)`, etc
 
 ## Including Plots
 
