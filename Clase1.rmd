@@ -85,6 +85,10 @@ Si no se utiliza ninguna de las tres formas de asignación, el valor se mostrar�
 c(3, 5, 6)
 ```
 
+## Operadores lógicos
+
+Hay que armar algo de operadores lógicos para poder generar ejemplos más piolas en los ifs y esas cosas.
+
 ## Aritmética vectorial
 
 Los vectores pueden usarse en expresiones aritméticas, donde las operaciones se realizan elemento a elemento. 
