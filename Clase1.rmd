@@ -119,3 +119,16 @@ print(v4)
 ```
 
 Algunas funciones importantes para trabajar con vectores son: `sum(v1)`, `length(v1)`, `mean(v1)`, `cumsum(v1)`, `var(v1)`, `sort(v1)`, etc
+
+
+## Control de flujo
+
+Siempre en programción es necesario poder controlar el flujo de las acciones, es decir, poder determinar cuando se debe realizar una acción y cuando no. Para esto existen lo que se llaman 'operadores de control de flujo', que pueden dividirse en dos grupos: 
+
+- Operadores de elección: if (si), else (sino), ifelse.
+- Operadores de iteración: for (para), while (mientras), replicate (replicar), etc.
+
+
+
+
+
